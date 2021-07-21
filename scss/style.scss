@@ -1,0 +1,115 @@
+// === FONTS ===
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;800&display=swap');
+// === /FONTS ===
+
+// === MIXIN ===
+@mixin Manrope {
+  font-family: 'Manrope', sans-serif;
+}
+// === /MIXIN ===
+
+// === VARIABLES ===
+$base: 4px;
+
+$bp-min-sm: 576px;
+$bp-max-xs: $bp-min-sm - 1;
+$bp-min-md: 768px;
+$bp-max-sm: $bp-min-md - 1;
+$bp-min-lg: 992px;
+$bp-max-md: $bp-min-lg - 1;
+$bp-min-xl: 1200px;
+$bp-max-lg: $bp-min-xl - 1;
+$bp-min-xxl: 1400px;
+$bp-max-xl: $bp-min-xxl - 1;
+
+$fw-s: 200;
+$fw-m: 400;
+$fw-l: 800;
+
+$fz-s: 12px;
+$fz-m: 24px;
+$fz-l: 36px;
+
+$color-white: #fff;
+$color-grey: #696969;
+$color-black: #000;
+
+$padding-vertical-sm: 30px;
+$padding-vertical-reg: 60px;
+// === /VARIABLES ===
+
+// === COMMON ===
+body {
+  height: 100%;
+  @include Manrope;
+  background-color: #000;
+  color: $color-grey;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+  background-image: linear-gradient($color-white, $color-white);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+
+  &:hover {
+    background-size: 100% 2px;
+    cursor: pointer;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+.section-outer {
+  padding: 20px;
+  .section-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: $padding-vertical-sm;
+    padding-bottom: $padding-vertical-sm;
+  }
+}
+// === /COMMON ===
+
+// === header ====
+@import 'header';
+// === /header ====
+
+// === main====
+@import 'main';
+// === /main ====
+
+// === showcase====
+@import 'showcase';
+// === /showcase===
+
+// === slider====
+// @import 'slider';
+
+// === /slider ====
+
+// === text ====
+.section-text {
+  margin-top: 50px;
+  @media (max-width: $bp-max-sm) {
+    margin-top: 0px;
+  }
+}
+// === /text ====

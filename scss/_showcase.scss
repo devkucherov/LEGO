@@ -1,0 +1,38 @@
+.showcase {
+  background-color: $color-white;
+  color: $color-black;
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0px;
+    @media (max-width: $bp-max-lg) {
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    &:hover {
+      box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    }
+    @media (max-width: $bp-max-xs) {
+      width: 300px;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__title {
+    color: $color-black;
+  }
+  &__price {
+    color: $color-black;
+  }
+}
